@@ -1,0 +1,774 @@
+*{
+    margin: 0; padding: 0; list-style: none; color: inherit; text-decoration: none;
+    line-height: 1.3; 
+    box-sizing: border-box;
+}
+body{
+    font-family: "Noto Sans KR", sans-serif;
+
+}
+
+img{vertical-align: top;}
+input, select, option, textarea, button{background-color: rgba(0,0,0,0); border: 0;}
+#wrapper{
+    overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.tab{display: none;}
+.pc{display: none;}
+.m{display: block;}
+
+.pop{
+    background-color: #003B82;
+    font-size: 12px;
+    color: #ffffff;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: center;
+}
+.pop .txt{
+    text-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 10px;
+}
+.pop .txt p{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0, -50%);
+    animation-name: floating;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes floating {
+    0%{left: 100%;}
+    100%{left: -100%;}
+}
+.pop .btn-cls button img{
+    width: 9px;
+    display: flex;
+    align-items: center;
+}
+header{
+    position: relative;
+    z-index: 999;
+}
+header .wrap{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    position: relative;
+    z-index: 1;
+}
+header .wrap h1{}
+header .wrap h1 img{
+    height: 20px;
+    display: block;
+}
+header .wrap .btn-menu{
+    position: absolute;
+    right: 20px;
+}
+header .wrap nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #003B82;
+    font-weight: bold;
+    top: 0;
+    color: #ffffff;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    overflow: visible scroll;
+}
+header .wrap nav .btn-close{
+    text-align: right;
+    margin-bottom: 20px;
+}
+header .wrap nav .btn-close button{
+    padding: 10px;
+}
+header .wrap nav .btn-close img{
+    width: 20px;
+}
+header .wrap nav .menu{display: none;}
+header .wrap nav .gnb{
+    font-size: 20px;
+}
+header .wrap nav .gnb li{
+    padding: 10px;
+    position: relative;
+}
+header .wrap nav .gnb li a{
+    padding: 10px;
+}
+header .wrap nav .gnb li .tit{}
+header .wrap nav .gnb li .tit img{
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+header .wrap nav .gnb li .sub{
+    font-size: 16px;
+    font-weight: normal;
+}
+header .wrap nav .gnb li .sub{display: none;}
+header .wrap nav .util{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+header .wrap nav .util .box{
+    font-size: 14px;
+}
+header .wrap nav .util .box a{
+    padding: 10px;
+}
+.banner{
+    position: relative;
+    margin-bottom: -40px;
+}
+.banner .slider{
+    width: 100%;                                 
+    overflow: hidden;
+    position: relative;
+}
+.banner .slide{
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.banner .slide img{
+    width: 100%;
+    height: auto;     
+}
+.main{}
+.main .wrap{
+    padding: 0px 20px;
+}
+/*ticket*/
+.main .wrap .booking .ticketcon .ticket2{display: none;}
+.main .wrap .booking .ticketcon2{display: none;}
+.main .wrap .booking{
+    position: relative;
+    box-shadow: 1px 1px 18px 1px rgba(197, 197, 197, 0.9);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.main .wrap .booking .btns{
+    display: flex;
+    font-size: 18px;
+}
+.main .wrap .booking .btns .box{
+    width: 50%;
+}
+.main .wrap .booking .btns .box button{
+    font-size: 16px;
+    font-weight: bold;
+    color: #003B82;
+    padding: 10px;
+    width: 100%;
+    background-color: #fff;
+}
+.main .wrap .booking .btns .box:first-child button{border-top-left-radius: 10px;}
+.main .wrap .booking .btns .box:last-child button{border-top-right-radius: 10px;}
+.main .wrap .booking .btns .box button.click{
+    background-color: #003B82;
+    color: #fff;
+}
+.main .wrap .booking .ticketcon{
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.main .wrap .booking .ticketcon .ticket .content{
+    color: #003B82;
+}
+.main .wrap .booking .ticketcon .ticket .content .station{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.main .wrap .booking .ticketcon .ticket .content .station .from{
+    width: 100%;
+}
+.main .wrap .booking .ticketcon .ticket .content .station div button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e5f7ff;
+    font-size: 14px;
+}
+.main .wrap .booking .ticketcon .ticket .content .station .from button{
+    width: 100%;
+}
+.main .wrap .booking .ticketcon .ticket .content .station .reverse{}
+.main .wrap .booking .ticketcon .ticket .content .station .reverse button{
+    background-color: unset;
+    padding: 0;
+}
+.main .wrap .booking .ticketcon .ticket .content .station .to{
+    width: 100%;
+}
+.main .wrap .booking .ticketcon .ticket .content .station .to button{
+    width: 100%;
+}
+.main .wrap .booking .ticketcon .ticket .content .date button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e5f7ff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.main .wrap .booking .ticketcon .ticket .content .bottom{
+    display: flex;
+    gap: 10px;
+}
+.main .wrap .booking .ticketcon .ticket .content .bottom div{
+    text-align: center;
+    width: 50%;
+}
+.main .wrap .booking .ticketcon .ticket .content .bottom .person button{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #e5f7ff;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.main .wrap .booking .ticketcon .ticket .content .bottom .srh button{
+    background-color: #003B82;
+    width: 100%;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+/*ticket end*/
+/*ticket2*/
+.main .wrap .booking .ticketcon .ticket2 .content{
+    color: #003B82;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .station{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .station .from{
+    width: 100%;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .station div button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e5f7ff;
+    font-size: 14px;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .station .from button{
+    width: 100%;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .station .reverse{}
+.main .wrap .booking .ticketcon .ticket2 .content .station .reverse button{
+    background-color: unset;
+    padding: 0;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .station .to{
+    width: 100%;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .station .to button{
+    width: 100%;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .date{
+    width: 100%;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .date button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e5f7ff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .bottom{
+    display: flex;
+    gap: 10px;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .bottom div{
+    text-align: center;
+    width: 50%;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .bottom .person button{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #e5f7ff;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.main .wrap .booking .ticketcon .ticket2 .content .bottom .srh{
+}
+.main .wrap .booking .ticketcon .ticket2 .content .bottom .srh button{
+    background-color: #003B82;
+    width: 100%;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+/*ticket2 end*/
+.main .wrap .popup{display: none;}
+/* ---인풋자리--- */
+.main .wrap .mainmem{
+    margin-bottom: 20px;
+}
+.main .wrap .mainmem div{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.main .wrap .mainmem div:first-child{
+    margin-bottom: 10px;
+}
+.main .wrap .mainmem div a{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    font-size: 12px;
+}
+.main .wrap .mainmem .mem .box{
+    margin-right: 10px;
+    width: 76px;
+}
+.main .wrap .mainmem .mem .box:last-child{
+    margin-right: 0;
+}
+.main .wrap .slidebanner{
+    margin-bottom: 20px;
+}
+.main .wrap .slidebanner .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .wrap .slidebanner .swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.main .wrap .slidebanner .swiper-pagination{
+    position: unset;
+}
+.main .wrap .maintrip{
+    margin-bottom: 20px;
+}
+.main .wrap .maintrip h2{
+    margin-bottom: 20px;
+}
+.main .wrap .maintrip .content{
+    margin-bottom: 30px;
+}
+.main .wrap .maintrip .content .con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.main .wrap .maintrip .content .con:last-child{
+    margin-bottom: 0;
+}
+.main .wrap .maintrip .content .con .box a{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.main .wrap .maintrip .content .con .box:last-child a{
+    margin-right: 0;
+}
+
+.main .wrap .maintrip .content .con .box img{
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+/* tripinto */
+.main .wrap .tripinto{}
+.main .wrap .tripinto h2{
+    margin-bottom: 20px;
+}
+.main .wrap .tripinto .btns2{
+    display: flex;
+    margin-bottom: 20px;
+}
+.main .wrap .tripinto .btns2 button{
+    font-size: 16px;
+    color: #0196d8;
+    border: 1px solid #0196d8;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.main .wrap .tripinto .btns2 .box:first-child button{
+    background-color: #0196d8;
+    color: #ffffff;
+}
+.main .wrap .tripinto .btns2 .box:last-child button{
+    margin-right: 0;
+}
+/*tripinto content1*/
+.main .wrap .tripinto .content1{
+    margin-bottom: 20px;
+}
+.main .wrap .tripinto .content1 .con{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.main .wrap .tripinto .content1 .con .into{
+    margin-right: 10px;
+    width: calc((100% - 10px) / 2);
+    margin-bottom: 10px;
+}
+.main .wrap .tripinto .content1 .con .into:nth-child(2){
+    margin-right: 0;
+}
+.main .wrap .tripinto .content1 .con .into:nth-child(4){
+    margin-right: 0;
+}
+.main .wrap .tripinto .content1 .con .into a{}
+.main .wrap .tripinto .content1 .con .into a .pic{
+    position: relative;
+}
+.main .wrap .tripinto .content1 .con .into a .pic .thumb{}
+.main .wrap .tripinto .content1 .con .into a .pic .thumb img{
+    border-radius: 10px;
+    width: 100%;
+}
+.main .wrap .tripinto .content1 .con .into a .pic .location{
+    position: absolute;
+    top: 0;
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.main .wrap .tripinto .content1 .con .into a .pic .location1{
+    background-color: #eaf2be;
+    color: #da9e38;
+}
+.main .wrap .tripinto .content1 .con .into a .pic .location_a{
+    
+}
+.main .wrap .tripinto .content1 .con .into a .intotxt{
+    padding: 10px;
+}
+.main .wrap .tripinto .content1 .con .into a .intotxt .txt1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: #666667;
+}
+.main .wrap .tripinto .content1 .con .into a .intotxt .txt1 .box:last-child{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.main .wrap .tripinto .content1 .con .into a .intotxt .txt1 .box:last-child img{
+    width: 10px;
+    margin-right: 3px;
+}
+.main .wrap .tripinto .content1 .con .into a .intotxt .txt2{}
+.main .wrap .tripinto .content1 .con .into a .intotxt .txt2 .box{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.main .wrap .tripinto .content1 .con .into a .intotxt .txt2 .box:last-child{
+    color: #0196d8;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 16px;
+}
+.main .wrap .tripinto .content1 .con .into a .pic .location2{
+    background-color: #faafd4;
+    color: #d430ab;
+}
+.main .wrap .tripinto .content1 .con .into a .pic .location3{
+    background-color: #bffaaf;
+    color: #238d1c;
+}
+.main .wrap .tripinto .content1 .con .into a .pic .location4{
+    background-color: #ffb2b2;
+    color: #c60e0e;
+}
+
+/*tripinto content2*/
+.main .wrap .tripinto .content2{
+    margin-bottom: 20px;
+    display: none;
+}
+.main .wrap .tripinto .content2 .con{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .wrap .tripinto .content2 .con .into{
+    margin-right: 10px;
+    width: calc((100% - 10px) / 2);
+    margin-bottom: 10px;
+}
+.main .wrap .tripinto .content2 .con .into:nth-child(2){
+    margin-right: 0;
+}
+.main .wrap .tripinto .content2 .con .into:nth-child(4){
+    margin-right: 0;
+}
+.main .wrap .tripinto .content2 .con .into a{}
+.main .wrap .tripinto .content2 .con .into a .pic{
+    position: relative;
+}
+.main .wrap .tripinto .content2 .con .into a .pic .thumb{}
+.main .wrap .tripinto .content2 .con .into a .pic .thumb img{
+    border-radius: 10px;
+    width: 100%;
+}
+.main .wrap .tripinto .content2 .con .into a .pic .location{
+    position: absolute;
+    top: 0;
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.main .wrap .tripinto .content2 .con .into a .pic .location5{
+    background-color: #ffb2b2;
+    color: #c60e0e;
+}
+.main .wrap .tripinto .content2 .con .into a .pic .location_a{
+    
+}
+.main .wrap .tripinto .content2 .con .into a .intotxt{
+    padding: 10px;
+}
+.main .wrap .tripinto .content2 .con .into a .intotxt .txt1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: #666667;
+}
+.main .wrap .tripinto .content2 .con .into a .intotxt .txt1 .box:last-child{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.main .wrap .tripinto .content2 .con .into a .intotxt .txt1 .box:last-child img{
+    width: 10px;
+    margin-right: 3px;
+}
+.main .wrap .tripinto .content2 .con .into a .intotxt .txt2{
+}
+.main .wrap .tripinto .content2 .con .into a .intotxt .txt2 .box{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.main .wrap .tripinto .content2 .con .into a .intotxt .txt2 .box:last-child{
+    color: #0196d8;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 16px;
+}
+.main .wrap .tripinto .content2 .con .into a .pic .location6{
+    background-color: #97e8fc;
+    color: #0297d6;
+}
+.main .wrap .tripinto .content2 .con .into a .pic .location7{
+    background-color: #afc2fa;
+    color: #3d66e3;
+}
+.main .wrap .tripinto .content2 .con .into a .pic .location8{
+    background-color: #bffaaf;
+    color: #238d1c;
+}
+/*tripinto content3*/
+.main .wrap .tripinto .content3{
+    margin-bottom: 20px;
+}
+.main .wrap .tripinto .content3 .con{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .wrap .tripinto .content3 .con .into{
+    margin-right: 10px;
+    width: calc((100% - 10px) / 2);
+    margin-bottom: 10px;
+}
+.main .wrap .tripinto .content3 .con .into:nth-child(2){
+    margin-right: 0;
+}
+.main .wrap .tripinto .content3 .con .into:nth-child(4){
+    margin-right: 0;
+}
+.main .wrap .tripinto .content3 .con .into a{}
+.main .wrap .tripinto .content3 .con .into a .pic{
+    position: relative;
+}
+.main .wrap .tripinto .content3 .con .into a .pic .thumb{}
+.main .wrap .tripinto .content3 .con .into a .pic .thumb img{
+    border-radius: 10px;
+    width: 100%;
+}
+.main .wrap .tripinto .content3 .con .into a .pic .location{
+    position: absolute;
+    top: 0;
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.main .wrap .tripinto .content3 .con .into a .pic .location9{
+    background-color: #8cdebd;
+    color: #10515f;
+}
+.main .wrap .tripinto .content3 .con .into a .pic .location_a{
+    
+}
+.main .wrap .tripinto .content3 .con .into a .intotxt{
+    padding: 10px;
+}
+.main .wrap .tripinto .content3 .con .into a .intotxt .txt1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: #666667;
+}
+.main .wrap .tripinto .content3 .con .into a .intotxt .txt1 .box:last-child{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.main .wrap .tripinto .content3 .con .into a .intotxt .txt1 .box:last-child img{
+    width: 10px;
+    margin-right: 3px;
+}
+.main .wrap .tripinto .content3 .con .into a .intotxt .txt2{
+}
+.main .wrap .tripinto .content3 .con .into a .intotxt .txt2 .box{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.main .wrap .tripinto .content3 .con .into a .intotxt .txt2 .box:last-child{
+    color: #0196d8;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 16px;
+}
+.main .wrap .tripinto .content3 .con .into a .pic .location10{
+    background-color: #faafd4;
+    color: #d430ab;
+}
+.main .wrap .tripinto .content3 .con .into a .pic .location11{
+    background-color: #8cdebd;
+    color: #10515f;
+}
+.main .wrap .tripinto .content3 .con .into a .pic .location12{
+    background-color: #faafd4;
+    color: #d430ab;
+}
+.main .wrap .notice{}
+.main .wrap .notice .head{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: end;
+}
+.main .wrap .notice .head h2{}
+.main .wrap .notice .head .plus a{
+    font-size: 12px;
+    color: #666667;
+    display: flex;
+    align-items: center;
+}
+.main .wrap .notice .head .plus img{
+    width: 20px;
+}
+.main .wrap .notice{
+    margin-bottom: 20px;
+}
+.main .wrap .notice .content{}
+.main .wrap .notice .content .con1{
+    border-radius: 10px;
+    background-color: #e5f7ff;
+    padding: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main .wrap .notice .content .con1 .box a{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.main .wrap .notice .content .con1 .box a:last-child{
+    margin-right: 0;
+}
+.main .wrap .notice .content .con1 .box a .pic{
+    margin-right: 5px;
+}
+.main .wrap .notice .content .con1 .box a .pic img{
+    width: 20px;
+}
+.main .wrap .notice .content .con2{}
+.main .wrap .notice .content .con2 .pic a{
+    display: block;
+}
+.main .wrap .notice .content .con2 .pic img{
+    width: 100%;
+    border-radius: 10px;
+}
+.footer{
+    padding: 20px;
+    background-color: #003B82;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+}
+.footer .txt .con div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer .txt .con:last-child{
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
