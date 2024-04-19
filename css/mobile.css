@@ -255,6 +255,7 @@ header .wrap nav .util .box a{
     padding: 10px;
     color: #ffffff;
     border-radius: 10px;
+    font-size: 14px;
 }
 /*ticket end*/
 /*ticket2*/
@@ -317,12 +318,12 @@ header .wrap nav .util .box a{
     border-radius: 10px;
     font-size: 14px;
 }
-.main .wrap .booking .ticketcon .ticket2 .content .bottom .srh{
-}
+
 .main .wrap .booking .ticketcon .ticket2 .content .bottom .srh button{
     background-color: #003B82;
     width: 100%;
     padding: 10px;
+    font-size: 14px;
     color: #ffffff;
     border-radius: 10px;
 }
