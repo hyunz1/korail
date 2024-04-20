@@ -194,6 +194,9 @@ header .wrap nav .util .box{
     margin-right: 10px;
     width: 120px;
 }
+.main .wrap .mainmem div:first-child{
+    margin-bottom: 0;
+}
 .main .wrap .mainmem .mem a{
     font-size: 14px;
 }
