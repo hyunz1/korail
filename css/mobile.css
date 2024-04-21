@@ -20,15 +20,6 @@ input, select, option, textarea, button{background-color: rgba(0,0,0,0); border:
 .pc{display: none;}
 .m{display: block;}
 
-@media only screen and (max-width: 767px) {
-    br{
-       display: inline-block;
-
-       content: " ";
-
-       padding: 0 2px;
-    }
-}
 
 .pop{
     background-color: #003B82;
