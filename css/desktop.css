@@ -9,7 +9,7 @@
     .content3 .into br{
 	    display:none !important;
     }
-    .content1 br{
+    .content1 .into br{
         display:block !important;
     }
 
