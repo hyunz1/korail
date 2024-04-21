@@ -9,7 +9,9 @@
     .content3 .into br{
 	    display:none !important;
     }
-
+    .content1 br{
+        display:block !important;
+    }
 
 .pop{display: none;}
 header .wrap{

@@ -19,6 +19,9 @@ input, select, option, textarea, button{background-color: rgba(0,0,0,0); border:
 .tab{display: none;}
 .pc{display: none;}
 .m{display: block;}
+.content1 br{
+    display:none !important;
+}
 
 .pop{
     background-color: #003B82;
